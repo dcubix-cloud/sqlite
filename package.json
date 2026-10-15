@@ -1,0 +1,44 @@
+{
+  "name": "@dcubix/sqlite",
+  "version": "0.1.0",
+  "description": "SQLite over HTTP for dcubix databases. D1-compatible: Drizzle's and Kysely's D1 drivers work unchanged.",
+  "keywords": [
+    "dcubix",
+    "sqlite",
+    "d1",
+    "cloudflare-d1",
+    "drizzle",
+    "kysely",
+    "database"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
