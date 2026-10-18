@@ -40,5 +40,13 @@
   },
   "devDependencies": {
     "typescript": "^6.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcubix-cloud/sqlite.git"
+  },
+  "homepage": "https://github.com/dcubix-cloud/sqlite#readme",
+  "bugs": {
+    "url": "https://github.com/dcubix-cloud/sqlite/issues"
   }
 }
